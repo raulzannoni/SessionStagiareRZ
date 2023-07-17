@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello StagiaireController!{% endblock %}
+
+{% block body %}
+    <h1>List of Stagiaires</h1>
+    {% for stagiaire in stagiaires %}
+        
+        <a href="{{ path('show_stagiaire', {'id': stagiaire.id}) }}">{{stagiaire}}</a> is been registered in {{stagiaire.sessions|length}} sessions <br><br>
+    {% endfor %}
+{% endblock %}

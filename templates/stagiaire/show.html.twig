@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profile of stagiaire{% endblock %}
+
+{% block body %}
+    <h1>{{ stagiaire }}</h1>
+    
+    <p>Born on {{stagiaire.dateBirth|date('d-m-Y')}}, is been registered in {{stagiaire.sessions|length}} sessions:<p>
+    {% for session in stagiaire.sessions %}
+        {{ session}} <br>
+    {% endfor %}
+
+{% endblock %}
+
+

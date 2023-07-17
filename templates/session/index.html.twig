@@ -8,6 +8,6 @@
         {% set placesAvailable = session.totalPlaces - session.stagiaires|length %}
 
         {{ session }}: session available from {{session.dateStart|date('d-m-Y')}} to {{session.dateEnd|date('d-m-Y')}},
-        {{placesAvailable == 1 ?  '1 place available' : placesAvailable == 0 ? 'no places availables' : placesAvailable ~ ' places availables'}}. <br>
+        {{placesAvailable == 1 ?  placesAvailable ~ ' place available' : placesAvailable == 0 ? 'no places availables' : placesAvailable ~ ' places availables'}}. <br>
     {% endfor %}
 {% endblock %}
